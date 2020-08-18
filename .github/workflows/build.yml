@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  build_blink_job:
+    runs-on: ubuntu-latest
+    name: Build blink firmware for ATMEGA328p  
+    steps:
+    - name: Build blink action step
+      id: blink_build
+      uses: Ang-Andrew/github-action-avr-gcc-docker@v1
+      with:
+        device: 'atmega328p'
+        sources: 'blink_led.c'
+        output: 'blink_led_out'
+        project: 'blink_led'
