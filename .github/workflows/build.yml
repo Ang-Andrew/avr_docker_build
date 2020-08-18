@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Build blink action step
       id: blink_build
-      uses: Ang-Andrew/github-action-avr-gcc-docker@v1.2
+      uses: Ang-Andrew/github-action-avr-gcc-docker@v1.3
       with:
         device: 'atmega328p'
         sources: 'blink_led.c'
