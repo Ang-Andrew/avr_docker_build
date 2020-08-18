@@ -15,3 +15,8 @@ jobs:
         sources: 'blink_led.c'
         output: 'blink_led_out'
         project: 'blink_led'
+    - name: Upload output hex
+      uses: actions/upload-artifact@v2
+      with:
+        name: Output-hex
+        path: /mount/*.hex
